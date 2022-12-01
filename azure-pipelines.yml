@@ -6,7 +6,6 @@ variables:
   dotnetSdkVersion: '6.x'
 
 steps:
-	@@ -11,11 +17,32 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
@@ -18,7 +17,6 @@ steps:
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
-	@@ -25,20 +52,16 @@ steps:
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
